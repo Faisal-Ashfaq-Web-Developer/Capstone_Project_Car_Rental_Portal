@@ -11,15 +11,7 @@ const HomePage = () => {
             <div className="navbar-right">
             <input type="text" placeholder="Search..." />
             <button>Search</button>
-            </div>
-            <div className="navbar-middle">
-            <select>
-                <option value="">Option 1</option>
-                <option value="">Option 2</option>
-                <option value="">Option 3</option>
-                {/* Add more options as needed */}
-            </select>
-            </div>
+            </div>  
         </nav>
         <div className="sidebar">
             <button>User</button>
