@@ -1,5 +1,6 @@
 import './App.css';
-import HomePage from './components/HomePage';
+import HomePage from './components/HomePage.js';
+import './components/HomePage.css';
 import AdminLogin from './components/AdminLogin';
 import AdminSignup from './components/AdminSignup';
 import OwnerLogin from './components/OwnerLogin';
@@ -18,7 +19,9 @@ import ownerService from './services/ownerService';
 import adminService from './services/adminService';
 
 function App() {
-  return
+  return(
+    <HomePage/>
+  )
   
 }
 

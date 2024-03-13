@@ -1,0 +1,90 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #007bff; /* Blue */
+        color: white;
+        padding: 10px 20px;
+    }
+    
+    .navbar-left {
+        flex: 1;
+    }
+    
+    .navbar-right {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .navbar-right input {
+        padding: 8px;
+        margin-right: 10px;
+        border-radius: 5px;
+        border: none;
+        width: 200px;
+        font-size: 16px;
+    }
+    
+    .navbar-right button {
+        padding: 8px 15px;
+        background-color: #28a745; /* Green */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    .navbar-right button:hover {
+        background-color: #218838; /* Darker green */
+    }
+    
+    .navbar-middle select {
+        padding: 8px;
+        font-size: 16px;
+    }
+    
+    .sidebar {
+        width: 200px;
+        background-color: #6c757d; /* Gray */
+        padding: 20px;
+    }
+    
+    .sidebar button {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #ffc107; /* Yellow */
+        color: #212529; /* Dark gray */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    .sidebar button:hover {
+        background-color: #ffca28; /* Darker yellow */
+    }
+    
+    footer {
+        background-color: #343a40; /* Dark gray */
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .social-media a {
+        color: white;
+        margin: 0 10px;
+        font-size: 18px;
+        text-align: right;
+    }
