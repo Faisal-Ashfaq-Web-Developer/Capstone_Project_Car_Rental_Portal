@@ -1,7 +1,6 @@
 const express = require ('express');
 const PORT = require("./src/config/serverConfig");
 const connectmongoDB = require("./src/config/mongoDB")
-
 const app = express();
 
 //Middleware
@@ -16,8 +15,7 @@ app.get('/', (req, res) => {
 });
 
 
-
 // Server listening to PORT
 app.listen(PORT, () => {
-  console.log("server started");
+  console.log(`server started on port ${PORT}` );
 });
