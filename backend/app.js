@@ -1,17 +1,23 @@
 const express = require ('express');
-const PORT = require("./src/config/serverConfig");
-const connectmongoDB = require("./src/config/mongoDB")
+const dotenv = require('dotenv');
+const mongoose = require('mongoose');
+
+const PORT = process.env.PORT || 8000;
 const app = express();
 
 //Middleware
 app.use(express.json());
 
 //Connection to Database
-connectmongoDB("mongodb+srv://batch6:herovired@cluster0.aqifkg2.mongodb.net/car_rentalDB");
+mongoose.connect(process.env.DB).then(() => {
+    console.log("Connected to Mongo DataBase")
+}).catch(() => {
+    console.log("Connection Failed to Mongo DataBase");
+})
 
 
 app.get('/', (req, res) => {
-    res.send('server is working')
+    res.send('Server is working')
 });
 
 
