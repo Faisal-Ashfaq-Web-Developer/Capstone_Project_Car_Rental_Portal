@@ -1,9 +1,12 @@
 const express = require ('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
+const user = require('./src/model/user/user')// Import User model
 
 const PORT = process.env.PORT || 8000;
 const app = express();
+
+const AuthRouter = require('./src/routes/authRoute');
 
 // Load environment variables
 dotenv.config();
@@ -18,6 +21,20 @@ mongoose.connect(process.env.DB).then(() => {
     console.log("Connection Failed to Mongo DataBase");
 })
 
+// Route to create a new user
+app.post('/users', async (req, res) => {
+    try {
+        const { username, email, password } = req.body;
+        // Create a new user document
+        const newUser = new User({ username, email, password });
+        // Save the new user to the database
+        await newUser.save();
+        res.status(201).json(newUser);
+    } catch (error) {
+        console.error("Error creating user:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
 
 app.get('/', (req, res) => {
     res.send('Server is working')
