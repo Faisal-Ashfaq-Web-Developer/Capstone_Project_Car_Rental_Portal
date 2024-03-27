@@ -3,7 +3,7 @@ Backend Developers (Person 1 and Person 2):
 Person 1: - Authentication
 Set up the Node.js environment. - Done (sohail)
 Design database schema (MongoDB) for storing user information (username, email, hashed password, etc.). Done (sohail)
-Create RESTful APIs for user signup and login using Express.js. In process
+Create RESTful APIs for user signup and login using Express.js. Done (sohail)
 Implement user authentication using JWT (JSON Web Tokens) for generating and verifying tokens. Done(Sohail)
 Integrate bcrypt for hashing user passwords securely. Done (sohail)
 

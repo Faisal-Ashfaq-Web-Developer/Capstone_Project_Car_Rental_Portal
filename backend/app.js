@@ -1,9 +1,10 @@
 const express = require ('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-const user = require('./src/model/user/user')// Import User model
+const authRoute = require('./src/routes/authRoute');
 
 const PORT = process.env.PORT || 8000;
+
 const app = express();
 
 const AuthRouter = require('./src/routes/authRoute');
@@ -35,6 +36,9 @@ app.post('/users', async (req, res) => {
         res.status(500).json({ error: "Internal server error" });
     }
 });
+
+// User routes for requests starting with '/api/users'
+app.use('/api/users', authRoute);
 
 app.get('/', (req, res) => {
     res.send('Server is working')

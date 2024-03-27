@@ -1,4 +1,6 @@
 const bcrypt = require('bcrypt');
+const { validationResult, body } = require('express-validator');
+
 const registerUserValidation = [
     body('name').notEmpty().withMessage('Name is required'),
     body('email').isEmail().withMessage('Invalid email format '),
