@@ -5,6 +5,9 @@ const mongoose = require('mongoose');
 const PORT = process.env.PORT || 8000;
 const app = express();
 
+// Load environment variables
+dotenv.config();
+
 //Middleware
 app.use(express.json());
 
@@ -25,3 +28,5 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`server started on port ${PORT}` );
 });
+
+
